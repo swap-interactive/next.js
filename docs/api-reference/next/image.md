@@ -47,13 +47,13 @@ When using an external URL, you must add it to
 
 ### width
 
-The width of the image, in pixels. Must be an integer without a unit.
+The desired width of the rendered image, in pixels. Must be an integer without a unit.
 
 Required, except for statically imported images, or those with [`layout="fill"`](#layout).
 
 ### height
 
-The height of the image, in pixels. Must be an integer without a unit.
+The desired height of the rendered image, in pixels. Must be an integer without a unit.
 
 Required, except for statically imported images, or those with [`layout="fill"`](#layout).
 

@@ -150,7 +150,7 @@ One of the ways that images most commonly hurt performance is through _layout sh
 Because `next/image` is designed to guarantee good performance results, it cannot be used in a way that will contribute to layout shift, and **must** be sized in one of three ways:
 
 1. Automatically, using a [static import](#local-images)
-2. Explicitly, by including a `height` **and** `width` property
+2. Explicitly, by including the desired `height` **and** `width` property
 3. Implicitly, by using `layout="fill"` which causes the image to expand to fill its parent element.
 
 > ### What if I don't know the size of my images?
@@ -163,11 +163,11 @@ Because `next/image` is designed to guarantee good performance results, it canno
 >
 > **Normalize your images**
 >
-> If you're serving images from a source that you control, consider modifying your image pipeline to normalize the images to a specific size.
+> If you're serving images from a source that you control, consider modifying your image pipeline to normalize the images to a specific size. For example, a user-provided avatar image could be cropped before being saved and then the image size would be known by the time its rendered.
 >
 > **Modify your API calls**
 >
-> If your application is retrieving image URLs using an API call (such as to a CMS), you may be able to modify the API call to return the image dimensions along with the URL.
+> If your application is retrieving image URLs using an API call (such as to a CMS), you may be able to modify the API call to return the image dimensions along with the URL. For example, set the [`loader`](/docs/api-reference/next/image.md#loader) property to match the API call expected by your CMS.
 
 If none of the suggested methods works for sizing your images, the `next/image` component is designed to work well on a page alongside standard `<img>` elements.
 
